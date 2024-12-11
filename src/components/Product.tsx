@@ -32,12 +32,13 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           src={activeImage}
           alt="thumbnail"
           height="1000"
+          objectFit="contain"
           width="1000"
-          className="rounded-md object-contain"
+          className="rounded-md"
         />
         <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
       </motion.div>
-      <div className="flex flex-row justify-center my-8 flex-wrap">
+      <div className=" relative flex flex-row justify-center my-8 flex-wrap max-h-80 overflow-auto">
         {product.images.map((image, idx) => (
           <button
             onClick={() => setActiveImage(image)}
@@ -46,12 +47,14 @@ export const SingleProduct = ({ product }: { product: Product }) => {
             <Image
               src={image}
               alt="product thumbnail"
+              objectFit="contain"
               height="1000"
               width="1000"
-              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
+              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top m-2 mb-r border rounded-lg border-neutral-100"
             />
           </button>
         ))}
+        <div className="absolute bottom-0 bg-white h-14 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
       </div>
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="font-black mb-2 pb-1"> {product.title}</Heading>

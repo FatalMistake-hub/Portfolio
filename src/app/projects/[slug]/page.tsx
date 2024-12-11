@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: "Projects | Minh Nhat",
       description:
-        "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+        "Minh Nhat is a developer, front-end developer. This is a list of projects that i has worked on.",
     };
   }
 }

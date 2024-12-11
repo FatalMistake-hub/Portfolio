@@ -17,12 +17,26 @@ const defaultFormState = {
 };
 export const Contact = () => {
   const [formData, setFormData] = useState(defaultFormState);
-
-  const handleSubmit = (e: any) => {
+  const [status, setStatus] = useState("");
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // Write your submit logic here
-    console.log(formData);
-    alert("Form submitted successfully");
+    setStatus("Sending...");
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setStatus("Email sent successfully!");
+        setFormData(defaultFormState);
+      } else {
+        setStatus("Error sending email.");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("Error sending email.");
+    }
   };
   return (
     <form className="form" onSubmit={handleSubmit}>

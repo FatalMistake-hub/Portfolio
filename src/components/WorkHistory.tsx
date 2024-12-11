@@ -1,13 +1,9 @@
 "use client";
 import { timeline } from "@/constants/timeline";
+import { IconCircleCheckFilled } from "@tabler/icons-react";
 import React from "react";
-import { Paragraph } from "./Paragraph";
 import { Heading } from "./Heading";
-import {
-  IconCheck,
-  IconCheckbox,
-  IconCircleCheckFilled,
-} from "@tabler/icons-react";
+import { Paragraph } from "./Paragraph";
 
 export const WorkHistory = () => {
   return (
@@ -17,7 +13,7 @@ export const WorkHistory = () => {
           className="flex md:flex-row flex-col space-y-10 md:space-y-0 space-x-10 my-20 relative max-md:max-w-lg m-auto"
           key={`timeline-${index}`}
         >
-          <Paragraph className="w-40">{item.date}</Paragraph>
+          <Paragraph className="min-w-[6rem]">{item.date}</Paragraph>
           <div>
             <Heading
               as="h5"
@@ -45,8 +41,8 @@ export const WorkHistory = () => {
 const Step = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex space-x-1 items-start my-2">
-      <IconCircleCheckFilled className="h-3 w-4 mt-1 text-neutral-300" />
-      <Paragraph className="text-sm md:text-sm lg:text-sm">
+      <IconCircleCheckFilled className="h-3 w-4 mt-1 text-neutral-300 text-center" />
+      <Paragraph className="w-[96%] text-sm md:text-sm lg:text-sm">
         {children}
       </Paragraph>
     </div>

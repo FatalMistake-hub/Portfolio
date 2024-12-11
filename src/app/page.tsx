@@ -21,16 +21,6 @@ export default async function Projects() {
       </Highlight>
       <br />
       <p>
-        <Image
-          src="https://raw.githubusercontent.com/Adam-pw/Adam-pw/refs/heads/main/animation_500_kxa883sd.gif"
-          alt="adam-pw"
-          height={175}
-          width={175}
-          layout={"responsive"}
-          unoptimized={true}
-        />
-      </p>
-      <p>
         - 🌱 I’m currently learning FE Development and other programming
         languages
       </p>

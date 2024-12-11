@@ -1,32 +1,55 @@
-import { Container } from "@/components/Container";
-import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
-import { Metadata } from "next";
-import Image from "next/image";
-
-import { motion } from "framer-motion";
-import About from "@/components/About";
-
-export const metadata: Metadata = {
-  title: "About | Minh Nhat",
-  description:
-    "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
-};
+import ImageContainer from "../../components/ImageContainer";
 
 export default function AboutPage() {
-  const images = [
-    "https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-  ];
   return (
-    <Container>
-      <span className="text-4xl">💬</span>
-      <Heading className="font-black">About Me</Heading>
-      <About />
-    </Container>
+    <>
+      <ImageContainer />
+      <div className="max-w-4xl">
+        <Paragraph className=" mt-4">
+          Hey there, I&apos;m Minh Nhat - a junior frontend developer passionate
+          about building engaging and user-friendly web experiences. I&apos;m
+          excited to bring my creativity, technical skills, and attention to
+          detail to a team that values clean code and great design.
+        </Paragraph>
+        <Paragraph className=" mt-4">
+          From the start of my journey in web development, I’ve been captivated
+          by the process of turning ideas into functional and visually appealing
+          websites. I specialize in crafting responsive and accessible user
+          interfaces, ensuring every detail works smoothly across devices. My
+          goal is to create products that not only meet technical requirements
+          but also deliver an outstanding user experience.
+        </Paragraph>
+
+        <Paragraph className=" mt-4">
+          In addition to coding, I have a knack for writing and sharing
+          knowledge. Whether it&apos;s breaking down complex topics for others
+          or collaborating on creative projects, I value communication and the
+          power of storytelling to connect ideas and people.
+        </Paragraph>
+        <Paragraph className=" mt-4">
+          What sets me apart is my eye for design and usability. I believe that
+          good development and great design go hand in hand, and I take pride in
+          ensuring my work strikes the perfect balance between form and
+          function.
+        </Paragraph>
+        <Paragraph className=" mt-4">
+          I’m currently seeking opportunities where I can grow, contribute, and
+          make a meaningful impact as part of a collaborative team. If you’re
+          looking for someone who’s eager to learn, dedicated to their craft,
+          and driven to create exceptional digital experiences, I’d love to
+          connect!
+        </Paragraph>
+        <Paragraph className=" mt-4">
+          Join me on this journey of bytes and narratives, logic and creativity,
+          code and prose. Together, we can explore the boundless possibilities
+          of technology and storytelling, all while reveling in the sheer beauty
+          of thoughtful design.
+        </Paragraph>
+        <Paragraph className=" mt-4">
+          Let’s build something amazing together—thank you for considering me!
+        </Paragraph>
+      </div>
+    </>
   );
 }
