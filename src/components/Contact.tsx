@@ -1,92 +1,38 @@
 "use client";
-import React, { useState } from "react";
+import { SendEmail } from "@/action/SendEmail";
+import { useRef } from "react";
 
-const defaultFormState = {
-  name: {
-    value: "",
-    error: "",
-  },
-  email: {
-    value: "",
-    error: "",
-  },
-  message: {
-    value: "",
-    error: "",
-  },
-};
 export const Contact = () => {
-  const [formData, setFormData] = useState(defaultFormState);
-  const [status, setStatus] = useState("");
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    setStatus("Sending...");
-    try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (res.ok) {
-        setStatus("Email sent successfully!");
-        setFormData(defaultFormState);
-      } else {
-        setStatus("Error sending email.");
-      }
-    } catch (err) {
-      console.error(err);
-      setStatus("Error sending email.");
+  const formRef = useRef<HTMLFormElement>(null);
+  async function handleSubmit(formData: FormData) {
+    const result = await SendEmail(formData);
+    alert(result);
+    if (result !== "Email sent successfully") {
+      formRef.current?.reset();
     }
-  };
+  }
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form ref={formRef} className="form" action={handleSubmit}>
       <div className="flex flex-col md:flex-row justify-between gap-5">
         <input
+          name="name"
           type="text"
           placeholder="Your Name"
           className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 py-2 rounded-md text-sm text-neutral-700 w-full"
-          value={formData.name.value}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              name: {
-                value: e.target.value,
-                error: "",
-              },
-            });
-          }}
         />
         <input
+          name="SenderEmail"
           type="email"
           placeholder="Your email address"
           className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 py-2 rounded-md text-sm text-neutral-700 w-full"
-          value={formData.email.value}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              email: {
-                value: e.target.value,
-                error: "",
-              },
-            });
-          }}
         />
       </div>
       <div>
         <textarea
+          name="message"
           placeholder="Your Message"
           rows={10}
           className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 mt-4 py-2 rounded-md text-sm text-neutral-700 w-full"
-          value={formData.message.value}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              message: {
-                value: e.target.value,
-                error: "",
-              },
-            });
-          }}
         />
       </div>
       <button

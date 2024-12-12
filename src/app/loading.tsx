@@ -1,7 +1,6 @@
-"use client";
 export default function Page() {
   return (
-    <div className="flex items-center justify-center w-screen h-screen border border-gray-200 rounded-lg ">
+    <div className="flex items-center justify-center w-full min-h-screen border border-gray-200 rounded-lg ">
       <div role="status">
         <svg
           aria-hidden="true"
