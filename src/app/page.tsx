@@ -18,39 +18,6 @@ export const metadata: Metadata = {
 export default async function Projects() {
   return (
     <Container>
-      {/* <h1>Hi 👋, I'm Quach Minh Nhat</h1>
-      <Highlight>
-        Student at Danang university technology and science.🌟.
-      </Highlight>
-      <br />
-      <p>
-        - 🌱 I’m currently learning FE Development and other programming
-        languages
-      </p>
-      <p>
-        - 📫 How to reach me{" "}
-        <Link href="mailto: quachminhnhat1711@gmail.com">
-          quachminhnhat1711@gmail.com
-        </Link>
-      </p>
-      <p>- ⚡ Fun fact : Food and Music🎵 are the reasons to live.</p>
-      <br />
-      <Highlight>Languages and Tools:</Highlight>
-      <div className="my-12">
-        <TechStack />
-      </div> */}
-
-      {/* <span className="text-4xl">⚡</span>
-      <div className="my-12">
-        <TechStack />
-      </div>
-      <Heading className="font-black mb-10">
-        {" "}
-        What I&apos;ve been working on
-      </Heading> */}
-      {/* <Products /> */}
-
-      {/* LEFT SIDE  */}
       <FramerWrapper
         className=" h-full w-auto flex flex-col justify-start gap-4"
         y={0}

@@ -9,7 +9,7 @@ export default function Home() {
     <Container>
       <span className="text-4xl">💼</span>
       <Heading className="font-black">Work History</Heading>
-      <Paragraph className="max-w-xl mt-4">
+      <Paragraph className="mt-4">
         I&apos;m a front-end developer that loves{" "}
         <Highlight>building products</Highlight> and web apps that are
         user-friendly and accessible. I have worked with a variety of companies
