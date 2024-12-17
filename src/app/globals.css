@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.name_underline::after{
+  content: "";
+  display: block;
+  width: 6rem;
+  height: .6rem;
+  background-color: #00cfab;
+}
+
+/* TEXT ROTATOR STYLES  */
+.animate-text-slide {
+  animation: text-slide 6s cubic-bezier(0.83, 0, 0.17, 1) infinite;
+}
+
+@keyframes text-slide {
+  0%,
+  20% {
+    transform: translateY(0%);
+  }
+
+  25%,
+  45% {
+    transform: translateY(-25%);
+  }
+
+  50%,
+  70% {
+    transform: translateY(-50%);
+  }
+
+  75%,
+  95% {
+    transform: translateY(-75%);
+  }
+}

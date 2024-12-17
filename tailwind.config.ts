@@ -12,6 +12,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        poppins: ['var(--font-poppins)'],
+        rubik: ['var(--font-rubik)']
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

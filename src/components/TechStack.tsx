@@ -11,30 +11,30 @@ export const TechStack = () => {
 
       className: "h-10 w-14",
     },
-    {
-      title: "AWS",
-      src: "/images/logos/aws.webp",
+    // {
+    //   title: "AWS",
+    //   src: "/images/logos/aws.webp",
 
-      className: "h-10 w-10",
-    },
-    {
-      title: "Figma",
-      src: "/images/logos/figma.png",
+    //   className: "h-10 w-10",
+    // },
+    // {
+    //   title: "Figma",
+    //   src: "/images/logos/figma.png",
 
-      className: "h-10 w-8",
-    },
-    {
-      title: "Framer Motion",
-      src: "/images/logos/framer.webp",
+    //   className: "h-10 w-8",
+    // },
+    // {
+    //   title: "Framer Motion",
+    //   src: "/images/logos/framer.webp",
 
-      className: "h-10 w-10",
-    },
-    {
-      title: "Node",
-      src: "/images/logos/node.png",
+    //   className: "h-10 w-10",
+    // },
+    // {
+    //   title: "Node",
+    //   src: "/images/logos/node.png",
 
-      className: "h-10 w-12",
-    },
+    //   className: "h-10 w-12",
+    // },
     {
       title: "Tailwind",
       src: "/images/logos/tailwind.png",
@@ -55,7 +55,7 @@ export const TechStack = () => {
       >
         Tech Stack
       </Heading>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap items-center justify-center gap-4">
         {stack.map((item) => (
           <Image
             src={item.src}
@@ -63,7 +63,7 @@ export const TechStack = () => {
             width={`200`}
             height={`200`}
             alt={item.title}
-            className={twMerge("object-contain mr-4 mb-4", item.className)}
+            className={twMerge("object-contain", item.className)}
           />
         ))}
       </div>

@@ -31,14 +31,14 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         <Image
           src={activeImage}
           alt="thumbnail"
-          height="1000"
-          objectFit="contain"
+          objectFit="cover"
           width="1000"
-          className="rounded-md"
+          height="1000"
+          className="rounded-md max-h-fit max-w-full mx-auto"
         />
         <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
       </motion.div>
-      <div className=" relative flex flex-row justify-center my-8 flex-wrap max-h-80 overflow-auto">
+      <div className="flex flex-row justify-center my-8 flex-wrap max-h-80 overflow-auto">
         {product.images.map((image, idx) => (
           <button
             onClick={() => setActiveImage(image)}
@@ -54,7 +54,6 @@ export const SingleProduct = ({ product }: { product: Product }) => {
             />
           </button>
         ))}
-        <div className="absolute bottom-0 bg-white h-14 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
       </div>
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="font-black mb-2 pb-1"> {product.title}</Heading>
