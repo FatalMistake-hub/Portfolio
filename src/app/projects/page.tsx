@@ -3,6 +3,7 @@ import { Heading } from "@/components/Heading";
 import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
 import { Products } from "@/components/Products";
+import { products, sideProjects } from "@/constants/products";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -20,8 +21,12 @@ export default function Projects() {
         {" "}
         What I&apos;ve been working on
       </Heading>
-
-      <Products />
+      <Products products={products} />
+      <span className="text-4xl">💡 🚀 ⚗️</span>
+      <Heading className="font-black mb-10">
+        Side projects and experiments
+      </Heading>
+      <Products products={sideProjects} />
     </Container>
   );
 }

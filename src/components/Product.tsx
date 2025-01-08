@@ -69,9 +69,9 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         </div>
       </div>
       <div>
-        <Paragraph className="max-w-xl mt-4">{product.description}</Paragraph>
+        <Paragraph className="my-4">{product.description}</Paragraph>
       </div>
-      <div className="prose prose-sm md:prose-base max-w-none text-neutral-600">
+      <div className="prose prose-sm md:prose-base max-w-none text-neutral-600 my-10">
         {product?.content}
       </div>
 

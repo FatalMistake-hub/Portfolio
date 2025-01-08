@@ -2,16 +2,17 @@
 import React from "react";
 import { Heading } from "./Heading";
 import { Product } from "@/types/products";
-import { products } from "@/constants/products";
 import Link from "next/link";
 import Image from "next/image";
 import { Paragraph } from "./Paragraph";
 import { motion } from "framer-motion";
 
-export const Products = () => {
+export const Products = ({ products }: {
+  products: Product[];
+}) => {
   return (
     <div>
-      <div className="grid grid-cols-1  gap-10">
+      <div className="grid grid-cols-1 gap-10 mb-10">
         {products.map((product: Product, idx: number) => (
           <motion.div
             key={product.href}

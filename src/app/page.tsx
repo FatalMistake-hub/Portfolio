@@ -29,14 +29,14 @@ export default async function Projects() {
         </FramerWrapper>
         {/* RIGHT SIDE image  */}
         <FramerWrapper
-          className="h-full w-[47%] relative block   max-lg:hidden"
+          className="h-full w-[30%] relative block "
           y={0}
           x={100}
         >
           {/* IMAGE  */}
           <a href="https://app.daily.dev/nhat1711">
             <Image
-              src="https://api.daily.dev/devcards/9a0ee9d7ddba41a09af6fc800b2cca7a.png?r=f0b"
+              src="https://api.daily.dev/devcards/v2/CSF1vbHz88qerLPko9lfv.png?type=default&r=ysu"
               alt="MinhNhat's Dev Card"
               height={200}
               width={200}

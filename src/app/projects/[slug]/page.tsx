@@ -4,7 +4,7 @@ import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
 import { SingleProduct } from "@/components/Product";
 import { Products } from "@/components/Products";
-import { products } from "@/constants/products";
+import { products, sideProjects } from "@/constants/products";
 import { Product } from "@/types/products";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -37,7 +37,7 @@ export default function SingleProjectPage({
   params: { slug: string };
 }) {
   const slug = params.slug;
-  const product = products.find((p) => p.slug === slug);
+  const product = [...products, ...sideProjects].find((p) => p.slug === slug);
 
   if (!product) {
     redirect("/projects");
