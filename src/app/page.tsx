@@ -14,22 +14,21 @@ export const metadata: Metadata = {
 
 export default async function Projects() {
   return (
-    <Container className="bg-[radial-gradient(#00cfab_1px,transparent_1px)] [background-size:16px_16px]">
-      <div className="flex relative break-words  min-h-screen items-center justify-between pb-4  ">
+    <Container className="bg-[radial-gradient(#00cfab_1px,transparent_1px)] [background-size:16px_16px] flex items-center justify-center min-h-screen">
+      <div className="flex flex-wrap break-words items-center pb-4 gap-14">
         <FramerWrapper
-          className=" h-full w-auto flex flex-col justify-start gap-4"
+          className="w-auto flex flex-col justify-start gap-4"
           y={0}
           x={-100}
         >
           <HeroTexts />
-          <div className="h-fit w-full p-4 flex gap-4">
+          <div className="h-fit w-full p-4 flex items-center justify-center flex-wrap gap-4">
             {/* <SocialLinks /> */}
             <TechStack />
           </div>
         </FramerWrapper>
         {/* RIGHT SIDE image  */}
         <FramerWrapper
-          className="h-full w-[30%] relative block "
           y={0}
           x={100}
         >
