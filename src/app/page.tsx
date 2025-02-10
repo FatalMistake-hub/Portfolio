@@ -4,21 +4,18 @@ import { Container } from "@/components/Container";
 import HeroTexts from "@/components/HeroTexts";
 import { TechStack } from "@/components/TechStack";
 import { Metadata } from "next";
-import Head from "next/head";
 import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Projects | Minh Nhat",
   description:
     "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+  robots: "index, follow",
 };
 
 export default async function Projects() {
   return (
     <>
-      <Head>
-        <meta name="robots" content="index, follow" />
-      </Head>
       <Container className="bg-[radial-gradient(#00cfab_1px,transparent_1px)] [background-size:16px_16px] flex items-center justify-center min-h-screen">
         <div className="flex flex-wrap break-words items-center pb-4 gap-14">
           <FramerWrapper
