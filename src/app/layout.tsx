@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/Footer";
 import { Circles } from "@/components/Circles";
 import { Suspense } from "react";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -35,6 +35,7 @@ export default function RootLayout({
         <div className="lg:pl-2 lg:pt-2 bg-gray-100 flex-1 overflow-y-auto">
           <div className="relative flex-1 bg-white min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 overflow-y-auto">
             {children}
+            <SpeedInsights />
             <Footer />
           </div>
         </div>

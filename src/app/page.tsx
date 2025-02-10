@@ -42,6 +42,7 @@ export default async function Projects() {
               objectFit="cover"
               loading="lazy"
               rel="preload"
+              fetchPriority="high"
             />
           </a>
         </FramerWrapper>
