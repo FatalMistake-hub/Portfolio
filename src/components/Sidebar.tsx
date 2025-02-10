@@ -40,6 +40,8 @@ export const Sidebar = () => {
         )}
       </AnimatePresence>
       <button
+        id="menu"
+        aria-label="Menu"
         className="fixed  top-4 left-4 h-8 w-8 backdrop-blur-sm flex items-center justify-center z-50 shadow-xl rounded-2xl"
         onClick={() => setOpen(!open)}
       >

@@ -40,6 +40,8 @@ export default async function Projects() {
               height={200}
               width={200}
               objectFit="cover"
+              loading="lazy"
+              rel="preload"
             />
           </a>
         </FramerWrapper>
