@@ -21,6 +21,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: product.title,
       description: product.description,
+      openGraph: {
+        title: product.title,
+        description: product.description,
+        url: `https://portfolio-fatalmistakehubs-projects.vercel.app/projects/${slug}`,
+      },
+      twitter: {
+        title: product.title,
+        description: product.description,
+      },
+      // Additional meta tags can be set here if needed.
     };
   } else {
     return {

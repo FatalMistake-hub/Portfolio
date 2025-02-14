@@ -36,9 +36,9 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           height="1000"
           className="rounded-md max-h-fit max-w-full mx-auto"
         />
-        <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
       </motion.div>
       <div className="flex flex-row justify-center my-8 flex-wrap max-h-80 overflow-auto">
+        <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
         {product.images.map((image, idx) => (
           <button
             onClick={() => setActiveImage(image)}

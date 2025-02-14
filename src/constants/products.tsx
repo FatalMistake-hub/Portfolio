@@ -1,11 +1,11 @@
 const listPictureTour = Array.from({ length: 14 }).map(
-  (_, i) => `/images/Picture${i + 1}.png`
+  (_, i) => `/images/Picture${i + 1}.webp`
 );
-const listPictureQuangNgai = Array.from({ length: 4 }).map(
-  (_, i) => `/images/QuangNgai${i + 1}.png`
+const listPictureQuangNgai = Array.from({ length: 6 }).map(
+  (_, i) => `/images/QuangNgai${i + 1}.webp`
 );
 const listPicturePointGame = Array.from({ length: 4 }).map(
-  (_, i) => `/images/point-game${i + 1}.png`
+  (_, i) => `/images/point-game${i + 1}.webp`
 );
 export const products = [
   {

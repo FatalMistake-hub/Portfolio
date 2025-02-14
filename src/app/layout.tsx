@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/Footer";
 import { Circles } from "@/components/Circles";
 import { Suspense } from "react";
+
 import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({
   subsets: ["latin"],
