@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Projects | Minh Nhat",
   description:
     "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
-  robots: "index, follow",
+  robots: "all",
   openGraph: {
     title: "Projects | Minh Nhat",
     description:
