@@ -1,22 +1,28 @@
 import { Container } from "@/components/Container";
-import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
 import { SingleProduct } from "@/components/Product";
-import { Products } from "@/components/Products";
 import { products, sideProjects } from "@/constants/products";
 import { Product } from "@/types/products";
 import { Metadata } from "next";
-import Image from "next/image";
 import { redirect } from "next/navigation";
+
+// export const revalidate = 3600;
 
 type Props = {
   params: { slug: string };
 };
 
+export async function generateStaticParams() {
+  return [...products, ...sideProjects].map((product) => ({
+    slug: product.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = params.slug;
-  const product = products.find((p) => p.slug === slug) as Product | undefined;
+  const product = [...products, ...sideProjects].find(
+    (p) => p.slug === slug
+  ) as Product | undefined;
+  
   if (product) {
     return {
       title: product.title,
@@ -24,13 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: product.title,
         description: product.description,
-        url: `https://portfolio-fatalmistakehubs-projects.vercel.app/projects/${slug}`,
       },
       twitter: {
         title: product.title,
         description: product.description,
       },
-      // Additional meta tags can be set here if needed.
     };
   } else {
     return {
@@ -41,17 +45,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function SingleProjectPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default function SingleProjectPage({ params }: Props) {
   const slug = params.slug;
-  const product = [...products, ...sideProjects].find((p) => p.slug === slug);
-
+  const product = [...products, ...sideProjects].find(
+    (p) => p.slug === slug
+  ) as Product | undefined;
+  
   if (!product) {
     redirect("/projects");
   }
+
   return (
     <Container>
       <SingleProduct product={product} />
