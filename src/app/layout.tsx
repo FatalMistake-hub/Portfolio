@@ -98,6 +98,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="google-site-verification" content="2x3KQk18neDmpdtVWTsMxh4BpyiRQtx16ZizkXzNZ-U" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://portfolio-fatalmistakehubs-projects.vercel.app" />
         <link rel="manifest" href="/manifest.json" />
