@@ -1,5 +1,22 @@
 import { Paragraph } from "@/components/Paragraph";
 import ImageContainer from "../../components/ImageContainer";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "About",
+  description: "Learn more about Minh Nhat, a passionate junior frontend developer with expertise in React, Next.js, and modern web technologies. Discover my journey, skills, and approach to creating engaging web experiences.",
+  keywords: [
+    "About Minh Nhat",
+    "Frontend developer skills",
+    "React developer experience", 
+    "Web development journey",
+    "UI/UX design",
+    "Junior developer"
+  ],
+  path: "/about",
+  image: "/images/about.webp",
+  type: "profile"
+});
 
 export default function AboutPage() {
   return (

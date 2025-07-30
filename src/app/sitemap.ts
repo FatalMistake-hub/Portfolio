@@ -3,48 +3,53 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://portfolio-fatalmistakehubs-projects.vercel.app";
+  
   // Combine all your product slugs
   const allProducts = [...products, ...sideProjects];
-  return [
+  
+  // Main pages
+  const routes = [
     {
-      url: "https://portfolio-fatalmistakehubs-projects.vercel.app",
+      url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "monthly" as const,
       priority: 1,
     },
     {
-      url: "https://portfolio-fatalmistakehubs-projects.vercel.app/about",
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
-      url: "https://portfolio-fatalmistakehubs-projects.vercel.app/projects",
+      url: `${baseUrl}/projects`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.5,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
     },
     {
-      url: "https://portfolio-fatalmistakehubs-projects.vercel.app/contact",
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.3,
-    },
-    {
-      url: "https://portfolio-fatalmistakehubs-projects.vercel.app/404",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.1,
-    },
-    {
-      url: "https://portfolio-fatalmistakehubs-projects.vercel.app/projects/resumse",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "monthly" as const,
       priority: 0.7,
     },
-    ...allProducts.map((product) => ({
-      url: `${baseUrl}/projects/${product.slug}`,
-      lastModified: new Date().toISOString(),
-    })),
+    {
+      url: `${baseUrl}/resume`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
   ];
+
+  // Add individual project pages
+  const projectRoutes = allProducts
+    .filter(product => product.slug)
+    .map(product => ({
+      url: `${baseUrl}/projects/${product.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
+
+  return [...routes, ...projectRoutes];
 }

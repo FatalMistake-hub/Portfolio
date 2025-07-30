@@ -27,20 +27,64 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: product.title,
       description: product.description,
+      keywords: [
+        product.title,
+        "Minh Nhat project",
+        "Frontend project",
+        "React project",
+        "Web development",
+        ...(product.stack || [])
+      ],
       openGraph: {
-        title: product.title,
+        title: `${product.title} - Minh Nhat Portfolio`,
         description: product.description,
+        type: "article",
+        url: `https://portfolio-fatalmistakehubs-projects.vercel.app/projects/${slug}`,
+        images: [
+          {
+            url: product.thumbnail,
+            width: 1200,
+            height: 630,
+            alt: product.title,
+          },
+        ],
       },
       twitter: {
-        title: product.title,
+        card: "summary_large_image",
+        title: `${product.title} - Minh Nhat Portfolio`,
         description: product.description,
+        creator: "@minhnhat_dev",
+        images: [
+          {
+            url: product.thumbnail,
+            alt: product.title,
+          },
+        ],
+      },
+      alternates: {
+        canonical: `https://portfolio-fatalmistakehubs-projects.vercel.app/projects/${slug}`,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
       },
     };
   } else {
     return {
-      title: "Projects | Minh Nhat",
+      title: "Project Not Found",
       description:
-        "Minh Nhat is a developer, front-end developer. This is a list of projects that i has worked on.",
+        "The requested project could not be found. Explore other projects by Minh Nhat, a frontend developer specializing in React and Next.js.",
+      robots: {
+        index: false,
+        follow: true,
+      },
     };
   }
 }

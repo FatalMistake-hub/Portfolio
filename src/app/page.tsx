@@ -7,26 +7,22 @@ import { TechStack } from "@/components/TechStack";
 import type { Metadata } from "next";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Projects | Minh Nhat",
-  description:
-    "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
-  robots: "all",
-  openGraph: {
-    title: "Projects | Minh Nhat",
-    description:
-      "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
-    type: "website",
-    url: "https://portfolio-fatalmistakehubs-projects.vercel.app",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Projects | Minh Nhat",
-    description:
-      "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
-    creator: "@yourTwitterHandle",
-  },
-};
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Home",
+  description: "Welcome to Minh Nhat's portfolio. A passionate frontend developer specializing in React, Next.js, and modern web technologies. Explore my projects and discover my journey in web development.",
+  keywords: [
+    "Minh Nhat portfolio",
+    "Frontend developer portfolio", 
+    "React projects",
+    "Next.js developer",
+    "Web development portfolio",
+    "JavaScript developer"
+  ],
+  path: "/",
+  type: "website"
+});
 
 const jsonLdData = {
   "@context": "https://schema.org",

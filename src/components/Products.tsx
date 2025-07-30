@@ -33,7 +33,7 @@ export const Products = ({ products }: {
             >
               <Image
                 src={product.thumbnail}
-                alt="thumbnail"
+                alt={product.title}
                 height="200"
                 width="200"
                 className="rounded-md max-md:mx-auto"

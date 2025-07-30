@@ -2,13 +2,22 @@ import { Contact } from "@/components/Contact";
 import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
 import { Paragraph } from "@/components/Paragraph";
-import { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact | Minh Nhat",
-  description:
-    "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
-};
+export const metadata = createPageMetadata({
+  title: "Contact",
+  description: "Get in touch with Minh Nhat for web development opportunities, collaborations, or project inquiries. Quick response guaranteed for all professional inquiries.",
+  keywords: [
+    "Contact Minh Nhat",
+    "Hire frontend developer",
+    "Web development services",
+    "React developer contact",
+    "Project collaboration",
+    "Freelance developer"
+  ],
+  path: "/contact",
+  type: "website"
+});
 
 export default function Projects() {
   return (

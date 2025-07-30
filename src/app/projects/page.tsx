@@ -1,17 +1,24 @@
 import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
 import { Products } from "@/components/Products";
 import { products, sideProjects } from "@/constants/products";
-import { Metadata } from "next";
-import Image from "next/image";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Projects | Minh Nhat",
-  description:
-    "Minh Nhat is a developer, front-end developer. This is a list of projects that i has worked on.",
-};
+export const metadata = createPageMetadata({
+  title: "Projects",
+  description: "Explore Minh Nhat's portfolio of web development projects. Discover innovative React and Next.js applications, side projects, and experiments showcasing modern frontend development skills.",
+  keywords: [
+    "Minh Nhat projects",
+    "React projects",
+    "Next.js applications",
+    "Frontend projects",
+    "Web development portfolio",
+    "Side projects", 
+    "JavaScript projects"
+  ],
+  path: "/projects",
+  type: "website"
+});
 
 export default function Projects() {
   return (

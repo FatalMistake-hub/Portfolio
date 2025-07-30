@@ -30,7 +30,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
       >
         <Image
           src={activeImage}
-          alt="thumbnail"
+          alt={product.title}
           objectFit="cover"
           width="1000"
           height="1000"
@@ -46,7 +46,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           >
             <Image
               src={image}
-              alt="product thumbnail"
+              alt={`thumbnail-${idx}`}
               objectFit="contain"
               height="1000"
               width="1000"

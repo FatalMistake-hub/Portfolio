@@ -1,8 +1,23 @@
-import { RefObject, useEffect } from 'react'
-export const isMobile = () => {
-  if (typeof window === "undefined") return false;
-  const width = window.innerWidth;
-  return width <= 1024;
+import { RefObject, useEffect, useState } from 'react'
+export const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 1024;
+      setIsMobile(mobile);
+      console.log(`isMobile: ${mobile}`);
+    }
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    }
+  }, []);
+  
+  return isMobile;
 };
 
 export const useClickOutside = (
