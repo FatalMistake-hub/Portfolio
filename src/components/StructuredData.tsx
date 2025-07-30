@@ -5,8 +5,8 @@ export function StructuredData() {
     name: "Minh Nhat",
     jobTitle: "Frontend Developer",
     description: "Passionate frontend developer specializing in React, Next.js, and modern web technologies",
-    url: "https://portfolio-fatalmistakehubs-projects.vercel.app",
-    image: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
+    url: "https://portfolio-rho-jet-91.vercel.app",
+    image: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
     sameAs: [
       "https://github.com/FatalMistake-hub",
       "https://www.linkedin.com/in/minh-nh%E1%BA%ADt-qu%C3%A1ch/",
@@ -54,9 +54,9 @@ export function OrganizationStructuredData() {
     "@type": "ProfessionalService",
     name: "Minh Nhat - Frontend Developer Services",
     description: "Professional frontend development services specializing in React, Next.js, and modern web technologies",
-    url: "https://portfolio-fatalmistakehubs-projects.vercel.app",
-    logo: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
-    image: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
+    url: "https://portfolio-rho-jet-91.vercel.app",
+    logo: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
+    image: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
     founder: {
       "@type": "Person",
       name: "Minh Nhat"
@@ -91,14 +91,14 @@ export function WebsiteStructuredData() {
     "@type": "WebSite",
     name: "Minh Nhat - Frontend Developer Portfolio",
     description: "Portfolio website of Minh Nhat, a passionate frontend developer specializing in React, Next.js, and modern web technologies",
-    url: "https://portfolio-fatalmistakehubs-projects.vercel.app",
+    url: "https://portfolio-rho-jet-91.vercel.app",
     author: {
       "@type": "Person",
       name: "Minh Nhat"
     },
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://portfolio-fatalmistakehubs-projects.vercel.app/search?q={search_term_string}",
+      target: "https://portfolio-rho-jet-91.vercel.app/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

@@ -27,7 +27,7 @@ export const metadata = createPageMetadata({
 const jsonLdData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  url: "https://portfolio-fatalmistakehubs-projects.vercel.app",
+  url: "https://portfolio-rho-jet-91.vercel.app",
   name: "Minh Nhat - Developer",
   description:
     "Minh Nhat is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",

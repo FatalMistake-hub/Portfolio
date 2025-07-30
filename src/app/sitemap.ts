@@ -2,7 +2,7 @@ import { products, sideProjects } from "@/constants/products";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://portfolio-fatalmistakehubs-projects.vercel.app";
+  const baseUrl = "https://portfolio-rho-jet-91.vercel.app";
   
   // Combine all your product slugs
   const allProducts = [...products, ...sideProjects];

@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: `${product.title} - Minh Nhat Portfolio`,
         description: product.description,
         type: "article",
-        url: `https://portfolio-fatalmistakehubs-projects.vercel.app/projects/${slug}`,
+        url: `https://portfolio-rho-jet-91.vercel.app/projects/${slug}`,
         images: [
           {
             url: product.thumbnail,
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ],
       },
       alternates: {
-        canonical: `https://portfolio-fatalmistakehubs-projects.vercel.app/projects/${slug}`,
+        canonical: `https://portfolio-rho-jet-91.vercel.app/projects/${slug}`,
       },
       robots: {
         index: true,

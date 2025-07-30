@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: 'https://portfolio-fatalmistakehubs-projects.vercel.app/sitemap.xml',
-    host: 'https://portfolio-fatalmistakehubs-projects.vercel.app',
+    sitemap: 'https://portfolio-rho-jet-91.vercel.app/sitemap.xml',
+    host: 'https://portfolio-rho-jet-91.vercel.app',
   }
 }

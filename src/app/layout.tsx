@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "Responsive Design",
     "Portfolio"
   ],
-  authors: [{ name: "Minh Nhat", url: "https://portfolio-fatalmistakehubs-projects.vercel.app" }],
+  authors: [{ name: "Minh Nhat", url: "https://portfolio-rho-jet-91.vercel.app" }],
   creator: "Minh Nhat",
   publisher: "Minh Nhat",
   robots: {
@@ -50,14 +50,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://portfolio-fatalmistakehubs-projects.vercel.app",
+    url: "https://portfolio-rho-jet-91.vercel.app",
     siteName: "Minh Nhat - Frontend Developer",
     title: "Minh Nhat - Frontend Developer & UI/UX Designer",
     description:
       "Passionate frontend developer specializing in React, Next.js, and modern web technologies. Creating engaging, responsive, and user-friendly web experiences.",
     images: [
       {
-        url: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
+        url: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
         width: 1200,
         height: 630,
         alt: "Minh Nhat - Frontend Developer",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     creator: "@minhnhat_dev",
     images: [
       {
-        url: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
+        url: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
         alt: "Minh Nhat - Frontend Developer",
       },
     ],
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     yandex: "your-yandex-verification-code",
   },
   alternates: {
-    canonical: "https://portfolio-fatalmistakehubs-projects.vercel.app",
+    canonical: "https://portfolio-rho-jet-91.vercel.app",
   },
   category: "technology",
 };
@@ -100,7 +100,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="google-site-verification" content="2x3KQk18neDmpdtVWTsMxh4BpyiRQtx16ZizkXzNZ-U" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://portfolio-fatalmistakehubs-projects.vercel.app" />
+        <link rel="canonical" href="https://portfolio-rho-jet-91.vercel.app" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />

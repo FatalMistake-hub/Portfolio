@@ -12,7 +12,7 @@ interface SEOProps {
 // SEO Configuration
 export const SEO_CONFIG = {
   SITE_NAME: 'Minh Nhat - Frontend Developer',
-  SITE_URL: 'https://portfolio-fatalmistakehubs-projects.vercel.app',
+  SITE_URL: 'https://portfolio-rho-jet-91.vercel.app',
   TWITTER_HANDLE: '@minhnhat_dev',
   DEFAULT_IMAGE: '/images/avt.jpg',
   AUTHOR: 'Minh Nhat',
@@ -33,18 +33,18 @@ export const commonKeywords = [
 
 // Default images for different pages
 export const defaultImages = {
-  home: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
-  about: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/about.webp",
-  projects: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
-  contact: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
-  resume: "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
+  home: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
+  about: "https://portfolio-rho-jet-91.vercel.app/images/about.webp",
+  projects: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
+  contact: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
+  resume: "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
 };
 
 export function generateMetadata({
   title,
   description,
   keywords = [],
-  image = "https://portfolio-fatalmistakehubs-projects.vercel.app/images/avt.jpg",
+  image = "https://portfolio-rho-jet-91.vercel.app/images/avt.jpg",
   url,
   type = "website"
 }: SEOProps): Metadata {
