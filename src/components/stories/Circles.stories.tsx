@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { Circles } from "./Circles";
+import { Circles } from "../Circles";
 
 const meta: Meta<typeof Circles> = {
   title: "Components/Circles",

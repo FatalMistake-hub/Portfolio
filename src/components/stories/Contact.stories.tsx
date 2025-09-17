@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { Contact } from "./Contact";
+import { Contact } from "../Contact";
 
 const meta: Meta<typeof Contact> = {
   title: "Components/Contact",

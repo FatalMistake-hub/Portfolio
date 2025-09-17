@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { SingleProduct } from "./Product";
+import { SingleProduct } from "../Product";
 import { Product } from "@/types/products";
 
 // Mock product data for stories

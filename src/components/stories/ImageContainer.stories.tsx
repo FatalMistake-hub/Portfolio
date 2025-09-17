@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import HeroTexts from "./HeroTexts";
+import ImageContainer from "../ImageContainer";
 
-const meta: Meta<typeof HeroTexts> = {
-  title: "Components/HeroTexts",
-  component: HeroTexts,
+const meta: Meta<typeof ImageContainer> = {
+  title: "Components/ImageContainer",
+  component: ImageContainer,
   parameters: {
-    layout: "centered",
+    layout: "padded",
     docs: {
       description: {
-        component: "A hero text component featuring animated text slides and stylized typography for the main landing section.",
+        component: "A grid container component that displays images with rotation animations and hover effects using Framer Motion.",
       },
     },
   },
@@ -33,7 +33,7 @@ export const WithBackground: Story = {
 export const DarkBackground: Story = {
   decorators: [
     (Story) => (
-      <div className="bg-gray-900 p-8 rounded-lg text-white">
+      <div className="bg-gray-900 p-8 rounded-lg">
         <Story />
       </div>
     ),
@@ -43,7 +43,7 @@ export const DarkBackground: Story = {
 export const Compact: Story = {
   decorators: [
     (Story) => (
-      <div className="max-w-md">
+      <div className="max-w-2xl mx-auto">
         <Story />
       </div>
     ),
@@ -53,17 +53,7 @@ export const Compact: Story = {
 export const FullWidth: Story = {
   decorators: [
     (Story) => (
-      <div className="w-full max-w-4xl text-center">
-        <Story />
-      </div>
-    ),
-  ],
-};
-
-export const LeftAligned: Story = {
-  decorators: [
-    (Story) => (
-      <div className="text-left max-w-2xl">
+      <div className="w-full">
         <Story />
       </div>
     ),

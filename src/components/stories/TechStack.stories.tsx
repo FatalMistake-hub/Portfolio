@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { TechStack } from "./TechStack";
+import { TechStack } from "../TechStack";
 
 const meta: Meta<typeof TechStack> = {
   title: "Components/TechStack",

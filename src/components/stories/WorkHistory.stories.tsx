@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { WorkHistory } from "./WorkHistory";
+import { WorkHistory } from "../WorkHistory";
 
 const meta: Meta<typeof WorkHistory> = {
   title: "Components/WorkHistory",
