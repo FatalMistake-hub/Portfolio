@@ -24,6 +24,17 @@ const nextConfig = {
   env: {
     RESEND_API_KEY: process.env.RESEND_API_KEY,
   },
+  webpack: (config, { dev, isServer }) => {
+    // Exclude storybook files from the build in production
+    if (!dev) {
+      config.module.rules.push({
+        test: /\.stories\.(js|jsx|ts|tsx)$/,
+        use: 'ignore-loader'
+      });
+    }
+    
+    return config;
+  },
 };
 
 const withMDX = nextMDX({

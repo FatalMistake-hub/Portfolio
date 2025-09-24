@@ -1,0 +1,20 @@
+# Exclude Storybook files from Vercel builds
+**/*.stories.js
+**/*.stories.jsx
+**/*.stories.ts
+**/*.stories.tsx
+**/*.stories.mdx
+
+# Exclude Storybook configuration
+.storybook/
+storybook-static/
+
+# Exclude development-only files
+**/*.test.js
+**/*.test.jsx
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.js
+**/*.spec.jsx
+**/*.spec.ts
+**/*.spec.tsx
