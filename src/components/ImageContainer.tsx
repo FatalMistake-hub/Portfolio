@@ -31,7 +31,7 @@ export default function ImageContainer() {
             width={200}
             height={400}
             alt={`Image ${index + 1}`}
-            className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
+            className="rounded-md object-cover transform rotate-3 shadow-xl dark:shadow-gray-900 block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
           />
         </motion.div>
       ))}

@@ -1,7 +1,7 @@
 "use client";
 import { navlinks } from "@/constants/navlinks";
 import { socials } from "@/constants/socials";
-import { useIsMobile, useClickOutside } from "@/lib/utils";
+import { useClickOutside, useIsMobile } from "@/lib/utils";
 import { Navlink } from "@/types/navlink";
 import { IconMenu2 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -12,6 +12,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Badge } from "./Badge";
 import { Heading } from "./Heading";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Sidebar = () => {
     const isMobile = useIsMobile();
@@ -25,6 +26,7 @@ export const Sidebar = () => {
             setOpen(true);
         }
     }, [isMobile]);
+
     return (
         <>
             <AnimatePresence>
@@ -34,7 +36,7 @@ export const Sidebar = () => {
                         animate={{ x: 0 }}
                         transition={{ duration: 0.2, ease: "linear" }}
                         exit={{ x: -200 }}
-                        className={`px-5 z-[100] pt-12 pb-8 bg-neutral-100 max-w-[14rem] lg:w-fit fixed lg:relative h-screen left-0 flex flex-col justify-between overflow-auto`}
+                        className={`px-5 z-[100] pt-12 pb-8 bg-neutral-100 dark:bg-neutral-800 max-w-[14rem] lg:w-fit fixed lg:relative h-screen left-0 flex flex-col justify-between overflow-auto transition-colors duration-300`}
                         ref={ref}
                     >
                         <div className="flex-1 ">
@@ -50,11 +52,14 @@ export const Sidebar = () => {
             <button
                 id="menu"
                 aria-label="Menu"
-                className="fixed  top-4 left-4 h-8 w-8 backdrop-blur-sm flex items-center justify-center z-50 shadow-xl rounded-2xl"
+                className="fixed top-4 left-4 h-8 w-8 backdrop-blur-md flex items-center justify-center z-50 shadow-xl rounded-2xl border border-neutral-200 dark:border-neutral-700 transition-colors duration-300"
                 onClick={() => setOpen(!open)}
             >
-                <IconMenu2 className="h-4 w-4 text-secondary" />
+                <IconMenu2 className="h-4 w-4 text-secondary dark:text-gray-300" />
             </button>
+            <div className="fixed top-4 right-4 h-8 w-8 backdrop-blur-sm flex items-center justify-center z-50 shadow-xl rounded-2xl">
+                <ThemeToggle />
+            </div>
         </>
     );
 };
@@ -76,8 +81,8 @@ export const Navigation = ({
                     href={link.href}
                     onClick={() => isMobile && setOpen(false)}
                     className={twMerge(
-                        "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
-                        isActive(link.href) && "bg-white shadow-lg text-primary"
+                        "text-secondary dark:text-gray-300 hover:text-primary dark:hover:text-white transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
+                        isActive(link.href) && "bg-white dark:bg-gray-700 shadow-lg text-primary dark:text-white"
                     )}
                 >
                     <link.icon
@@ -105,7 +110,7 @@ export const Navigation = ({
                     key={link.href}
                     href={link.href}
                     className={twMerge(
-                        "text-secondary hover:text-primary text-sm animate-pulse flex rounded-full justify-start items-center gap-2 w-full h-fit p-2 shadow-md border-black hover:bg-primary hover:text-white hover:animate-none"
+                        "text-secondary dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm  flex rounded-full justify-start items-center gap-3 w-full h-fit p-2 shadow-md bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-primary hover:text-white hover:animate-pulse transition-colors duration-300"
                     )}
                 >
                     <link.icon
@@ -132,8 +137,8 @@ const SidebarHeader = () => {
                 className="object-cover object-top rounded-full flex-shrink-0"
             />
             <div className="flex text-sm flex-col">
-                <p className="font-bold text-primary">Minh Nhat</p>
-                <p className="font-light text-secondary">Developer</p>
+                <p className="font-bold text-primary dark:text-white transition-colors duration-300">Minh Nhat</p>
+                <p className="font-light text-secondary dark:text-gray-300 transition-colors duration-300">Developer</p>
             </div>
         </div>
     );

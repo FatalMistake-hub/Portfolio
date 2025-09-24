@@ -37,8 +37,8 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           className="rounded-md max-h-fit max-w-full mx-auto"
         />
       </motion.div>
-      <div className="flex flex-row justify-center my-8 flex-wrap max-h-80 overflow-auto">
-        <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
+      <div className="flex flex-row justify-center my-8 flex-wrap max-h-80 overflow-">
+        <div className="absolute bottom-0 bg-white dark:bg-gray-900 h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)] transition-colors duration-300" />
         {product.images.map((image, idx) => (
           <button
             onClick={() => setActiveImage(image)}
@@ -50,7 +50,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
               objectFit="contain"
               height="1000"
               width="1000"
-              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top m-2 mb-r border rounded-lg border-neutral-100"
+              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top m-2 mb-r border rounded-lg border-neutral-100 dark:border-gray-700 hover:border-neutral-300 dark:hover:border-gray-500 transition-all duration-200"
             />
           </button>
         ))}
@@ -61,7 +61,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           {product.stack?.map((stack: string) => (
             <span
               key={stack}
-              className="text-xs  md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+              className="text-xs md:text-xs lg:text-xs bg-gray-50 dark:bg-gray-700 px-2 py-1 rounded-sm text-secondary dark:text-gray-300 transition-colors duration-300"
             >
               {stack}
             </span>
@@ -71,14 +71,14 @@ export const SingleProduct = ({ product }: { product: Product }) => {
       <div>
         <Paragraph className="my-4">{product.description}</Paragraph>
       </div>
-      <div className="prose prose-sm md:prose-base max-w-none text-neutral-600 my-10">
+      <div className="prose prose-sm md:prose-base dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-300 my-10 transition-colors duration-300">
         {product?.content}
       </div>
 
       <a
         href={product.href}
         target="__blank"
-        className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 bg-gray-800 text-white shadow-lg shadow-black/20 sm:backdrop-blur-sm group-hover/button:bg-gray-50/15 group-hover/button:scale-105 focus-visible:ring-1 focus-visible:ring-offset-2 ring-gray-50/60 text-sm font-medium px-4 py-2 mt-auto origin-left"
+        className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 bg-gray-800 dark:bg-gray-700 text-white shadow-lg shadow-black/20 sm:backdrop-blur-sm group-hover/button:bg-gray-50/15 group-hover/button:scale-105 focus-visible:ring-1 focus-visible:ring-offset-2 ring-gray-50/60 text-sm font-medium px-4 py-2 mt-auto origin-left duration-300"
       >
         Live Preview
         <svg

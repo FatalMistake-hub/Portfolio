@@ -2,11 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark mode transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #6b7280;
+  border-radius: 9999px;
+}
+
+
 .name_underline::after{
   content: "";
   display: block;
   width: 6rem;
   height: .6rem;
+  background-color: #00cfab;
+}
+
+/* Dark mode support for name underline */
+.dark .name_underline::after {
   background-color: #00cfab;
 }
 
