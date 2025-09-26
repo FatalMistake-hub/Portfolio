@@ -10,7 +10,7 @@ const HeroTexts = () => {
           I am a Software Developer / 
           <span className="inline-flex ml-2 flex-col h-[calc(theme(fontSize.lg)*theme(lineHeight.tight))] sm:h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] overflow-hidden">
             <ul className="block text-left font-rubik text-lg sm:text-2xl leading-tight [&_li]:block animate-text-slide">
-              <li className="text-[#00cfab]">Hello,</li>
+              <li className="text-[#00cfad]">Hello,</li>
               <li className="text-[#00cfab]">welcome</li>
               <li className="text-[#00cfab]">to</li>
               <li className="text-[#00cfab]">my portfolio</li>

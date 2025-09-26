@@ -34,7 +34,7 @@ export const ThemeToggle: React.FC = () => {
         animate={{
           rotate: theme === 'dark' ? 180 : 0,
         }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.6 }}
       >
         {theme === 'light' ? (
           <IconMoon className="h-5 w-5 text-gray-700" />

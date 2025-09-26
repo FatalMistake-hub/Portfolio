@@ -15,7 +15,6 @@
     "@mapbox/rehype-prism": "^0.8.0",
     "@mdx-js/loader": "^2.3.0",
     "@next/mdx": "^13.4.19",
-    "@specy/liquid-glass-react": "^1.0.2",
     "@tabler/icons-react": "^2.32.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.5.3",

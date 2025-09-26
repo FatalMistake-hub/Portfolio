@@ -4,7 +4,7 @@
 
 /* Dark mode transitions */
 * {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.6s ease, border-color 0.6s ease, color 0.6s ease;
 }
 
 /* Custom scrollbar for dark mode */

@@ -44,7 +44,7 @@ export const Sidebar = () => {
                             <Navigation setOpen={setOpen} />
                         </div>
                         <div onClick={() => isMobile && setOpen(false)}>
-                            <Badge href="/resume" text="Read Resume" />
+                            <Badge href="https://www.canva.com/design/DAGeWDyMaMg/7oOrTF9Q_xjSj0lXsBtOHg/edit?utm_content=DAGeWDyMaMg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" text="Read Resume" />
                         </div>
                     </motion.div>
                 )}
